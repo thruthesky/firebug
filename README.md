@@ -10,7 +10,7 @@
 - 코드(기능) 추가, 변경을 하신 후 PR 하시면 됩니다.
   - 참고로 main 브랜치는 protected 되어져 있어, Repository 에 collaborator 로 등록을 해도 PR 해야 합니다.
 
-- 본인이 코딩을 해 보고 싶은 부분이 있으면 clone 아무 말 없이 코딩을 하셔도 됩니다.
+- 본인이 코딩을 해 보고 싶은 부분이 있으면 clone 후, 아무 말 없이 코딩을 하셔도 됩니다.
   - 하지만, 미리 말씀해 주시면, 본 문서의 `참여` 부분에 이름을 적어드립니다. 그래서 얼마나 많은 분들이 참여하고 있고, 누구와 소통해야하는지 알 수 있습니다.
 
 
@@ -56,7 +56,7 @@
   - Extensions 사용법
   - CI/CD
   - Crashlytics
-  - Messaging - Push noitification
+  - Messaging - 헤Push noitification
   - AdMob
   - Dynanic Link ( 파이어베이스에서 앞으로 Dynamic Link 를 지원하지 않음. 대체 기능 찾을 것.)
 
