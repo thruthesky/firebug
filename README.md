@@ -54,6 +54,11 @@
   - Functions
   - Remote Config
   - Extensions 사용법
+  - CI/CD
+  - Crashlytics
+  - Messaging - Push noitification
+  - AdMob
+  - Dynanic Link ( 파이어베이스에서 앞으로 Dynamic Link 를 지원하지 않음. 대체 기능 찾을 것.)
 
 
 ## 코딩가이드
@@ -85,8 +90,11 @@
 ## 설치
 
 - 각자의 Firebase 프로젝트를 연결하시면 됩니다.
-  - 이러한 이유로 아래의 세 파일은 .gitignore 에 등록이 되었습니다.
+  - 이러한 이유로 아래의 아래의 파일들은 .gitignore 에 등록이 되었습니다.
     - `firebase_options.dart`
     - `google-services.json`
     - `GoogleService-Info.plist`
     - `firebase_app_id_file.json`
+
+
+
