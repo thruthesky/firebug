@@ -9,7 +9,11 @@
 
 - 코드(기능) 추가, 변경을 하신 후 PR 하시면 됩니다.
   - 참고로 main 브랜치는 protected 되어져 있어, Repository 에 collaborator 로 등록을 해도 PR 해야 합니다.
-  - PR 이 뭔지 모르신다구요? 그럼 [Git(Github) 공부 부터 시작하기](https://velog.io/@2-pi-r/%EA%B9%83-%EA%B9%83%ED%97%88%EB%B8%8C-%EA%B3%B5%EB%B6%80%EC%9E%90%EB%A3%8C-%EC%B6%94%EC%B2%9C)
+  - PR 이 뭔지 모르신다구요? Git 공부를 좀 하셔야겠죠?
+    - Git 은 여러분이 생각하는 것보다 훨씬 쉽습니다. 파일 관리 탐색기에서 폴더 또는 파일 생성, 수정, 복사 등을 해 보셨나요? Git 은 이런 파일 생성/수정/삭제 작업을 나 혼자만이 아닌 나와 나의 멤버들이 같이 할 수 있게 해 줍니다.
+    -  [Git(Github) 공부  자료](https://velog.io/@2-pi-r/%EA%B9%83-%EA%B9%83%ED%97%88%EB%B8%8C-%EA%B3%B5%EB%B6%80%EC%9E%90%EB%A3%8C-%EC%B6%94%EC%B2%9C)
+    -  [코딩알려주는 누나 - Git](https://www.youtube.com/watch?v=cwC8t9dno2s)
+    -  [Github 코드팩토리 동영상 강좌](https://www.youtube.com/watch?v=c4NbqmewsWU)
 
 - 본인이 코딩을 해 보고 싶은 부분이 있으면 clone 후, 아무 말 없이 코딩을 하셔도 됩니다.
   - 하지만, 미리 말씀해 주시면, 본 문서의 `참여` 부분에 이름을 적어드립니다. 그래서 얼마나 많은 분들이 참여하고 있고, 누구와 소통해야하는지 알 수 있습니다.
