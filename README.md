@@ -61,7 +61,7 @@
 ### Realtime Database
 
 - Firestore 가 필요하지 않는 상황에서는 Realtime Database 를 쓰는 것이 원칙.
-- 꼭 필요한 경우에만 Realtime Database 를 쓸 것.
+- 꼭 필요한 경우에만 Firestore 를 쓸 것.
 - 회원 관리, 게시판, 채팅 기능 등에서는 반드시 Realtime Database 를 쓸 것.
 
 
