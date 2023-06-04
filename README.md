@@ -32,6 +32,24 @@
   - 팔로잉
   - 피드
     - 내가 좋아요/팔로우 하는 사람의 새글 목록
+  - 앱체크
+  - 호스팅
+  - Storage 업로드
+    - 이미지 썸네일
+  - Functions
+  - Remote Config
+  - Extensions 사용법
+
+
+### 스터디
+
+#### Realtime Database
+
+- Firestore 가 필요하지 않는 상황에서는 Realtime Database 를 쓰는 것이 원칙.
+- 꼭 필요한 경우에만 Realtime Database 를 쓸 것.
+- 회원 관리, 게시판, 채팅 기능 등에서는 반드시 Realtime Database 를 쓸 것.
+
+
 
 ## 세미나
 
