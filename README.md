@@ -4,8 +4,11 @@
 
 ## 참여하기
 
-- 본 repo 를 clone 해서, 추가 또는 수정 사항이 있으시면 PR 하시면 됩니다. PR 이 번거로우신 분들은 Github 아이디를 주시면, collaborator 로 등록을 해 드리겠습니다.
+- 본 repo 를 clone 해서 소스 코드를 확인하시고 실행하시면 됩니다.
   - 물론 참여하지 않고, 본 자료를 보시기만 해도 됩니다.
+
+- 코드(기능) 추가, 변경을 하신 후 PR 하시면 됩니다.
+  - 참고로 main 브랜치는 protected 되어져 있어, Repository 에 collaborator 로 등록을 해도 PR 해야 합니다.
 
 
 ## 목적
@@ -48,6 +51,7 @@
 - Firestore 가 필요하지 않는 상황에서는 Realtime Database 를 쓰는 것이 원칙.
 - 꼭 필요한 경우에만 Realtime Database 를 쓸 것.
 - 회원 관리, 게시판, 채팅 기능 등에서는 반드시 Realtime Database 를 쓸 것.
+
 
 
 
