@@ -77,4 +77,16 @@
 
 
 
+### 플랫폼
 
+- Android, iOS, Web 이렇게 3가지를 지원하는 코드를 작성합니다.
+
+
+## 설치
+
+- 각자의 Firebase 프로젝트를 연결하시면 됩니다.
+  - 이러한 이유로 아래의 세 파일은 .gitignore 에 등록이 되었습니다.
+    - `firebase_options.dart`
+    - `google-services.json`
+    - `GoogleService-Info.plist`
+    - `firebase_app_id_file.json`
