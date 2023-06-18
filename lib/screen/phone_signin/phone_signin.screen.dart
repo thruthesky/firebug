@@ -35,25 +35,35 @@ class _PhoneSigninScreenState extends State<PhoneSigninScreen> {
               ),
               ElevatedButton(
                 onPressed: () async {
-                  await FirebaseAuth.instance.verifyPhoneNumber(
-                    phoneNumber: phoneNumber.text,
-                    verificationCompleted: (PhoneAuthCredential credential) {
-                      // 안드로이드에서만 동작
-                      // 자동으로 SMS 코드 인증.
-                    },
-                    verificationFailed: (FirebaseAuthException e) {},
-                    codeSent: (String verificationId, int? resendToken) async {
-                      // 전화번호가 인증되고, SMS 코드가 전송되었을 때,
-                      // Update the UI - wait for the user to enter the SMS code
-                      // ...
-                      print('---> sms code sent;');
-                      this.verificationId = verificationId;
-                    },
-                    codeAutoRetrievalTimeout: (String verificationId) {
-                      // 안드로이드에서만 동작.
-                      // 자동으로 SMS 코드 인증이 실패했을 때, (시간 초과 등 ...)
-                    },
-                  );
+                  try {
+                    await FirebaseAuth.instance.verifyPhoneNumber(
+                      phoneNumber: phoneNumber.text,
+                      verificationCompleted: (PhoneAuthCredential credential) {
+                        // 안드로이드에서만 동작
+                        // 자동으로 SMS 코드 인증.
+                      },
+                      verificationFailed: (FirebaseAuthException e) {
+                        if (e.code == 'invalid-phone-number') {
+                          print('The provided phone number is not valid.');
+                        }
+                        // 인증 실패
+                        print('---> error: $e');
+                      },
+                      codeSent: (String verificationId, int? resendToken) async {
+                        // 전화번호가 인증되고, SMS 코드가 전송되었을 때,
+                        // Update the UI - wait for the user to enter the SMS code
+                        // ...
+                        print('---> sms code sent;');
+                        this.verificationId = verificationId;
+                      },
+                      codeAutoRetrievalTimeout: (String verificationId) {
+                        // 안드로이드에서만 동작.
+                        // 자동으로 SMS 코드 인증이 실패했을 때, (시간 초과 등 ...)
+                      },
+                    );
+                  } catch (e) {
+                    print('---> error: $e');
+                  }
                 },
                 child: const Text('인증 코드 전송'),
               ),

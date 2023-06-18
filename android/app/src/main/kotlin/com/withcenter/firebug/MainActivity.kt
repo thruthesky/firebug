@@ -1,4 +1,4 @@
-package com.example.firebug
+package com.withcenter.firebug
 
 import io.flutter.embedding.android.FlutterActivity
 
