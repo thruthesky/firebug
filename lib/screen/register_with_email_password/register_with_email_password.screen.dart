@@ -4,14 +4,13 @@ import 'package:go_router/go_router.dart';
 
 class RegisterWithEmailPasswordScreen extends StatefulWidget {
   const RegisterWithEmailPasswordScreen({super.key});
+  static const routeName = '/register-with-email-password';
 
   @override
-  State<RegisterWithEmailPasswordScreen> createState() =>
-      _RegisterWithEmailPasswordScreenState();
+  State<RegisterWithEmailPasswordScreen> createState() => _RegisterWithEmailPasswordScreenState();
 }
 
-class _RegisterWithEmailPasswordScreenState
-    extends State<RegisterWithEmailPasswordScreen> {
+class _RegisterWithEmailPasswordScreenState extends State<RegisterWithEmailPasswordScreen> {
   final email = TextEditingController();
   final password = TextEditingController();
   @override
@@ -30,15 +29,12 @@ class _RegisterWithEmailPasswordScreenState
               ),
             ),
             const SizedBox(height: 16),
-            TextField(
-                controller: password,
-                decoration: const InputDecoration(label: Text('Password'))),
+            TextField(controller: password, decoration: const InputDecoration(label: Text('Password'))),
             const SizedBox(height: 16),
             ElevatedButton(
                 onPressed: () async {
                   try {
-                    final credential = await FirebaseAuth.instance
-                        .createUserWithEmailAndPassword(
+                    final credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
                       email: email.text,
                       password: password.text,
                     );

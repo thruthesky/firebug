@@ -23,7 +23,7 @@ final _router = GoRouter(
       builder: (context, state) => const AboutScreen(),
     ),
     GoRoute(
-      path: '/register-with-email-password',
+      path: RegisterWithEmailPasswordScreen.routeName,
       builder: (context, state) => const RegisterWithEmailPasswordScreen(),
     ),
     GoRoute(
