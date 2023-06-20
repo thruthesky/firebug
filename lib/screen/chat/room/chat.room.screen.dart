@@ -28,9 +28,7 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
 
   CollectionReference get messageCol => roomDoc.collection('messages');
 
-  get messageQuery => messageCol.orderBy('listNo');
-
-  int listNo = 0;
+  get messageQuery => messageCol.orderBy('createdAt', descending: true);
 
   @override
   Widget build(BuildContext context) {
@@ -46,10 +44,6 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
               query: messageQuery,
               itemBuilder: (context, snapshot) {
                 Map<String, dynamic> messageDocData = snapshot.data();
-
-                if (messageDocData['listNo'] != null) {
-                  listNo = listNo < (messageDocData['listNo'] ?? 0) ? listNo : messageDocData['listNo'];
-                }
 
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -92,7 +86,6 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
       'message': message.text,
       'sender': FirebaseAuth.instance.currentUser!.uid,
       'createdAt': FieldValue.serverTimestamp(),
-      'listNo': listNo - 1,
     });
     message.clear();
     // FocusNode().requestFocus();
