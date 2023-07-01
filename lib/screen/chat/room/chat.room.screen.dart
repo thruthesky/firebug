@@ -88,6 +88,5 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
       'createdAt': FieldValue.serverTimestamp(),
     });
     message.clear();
-    // FocusNode().requestFocus();
   }
 }

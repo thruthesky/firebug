@@ -12,7 +12,7 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-  final nickname = TextEditingController();
+  final displayName = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +34,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
               final DocumentSnapshot? documentSnapshot = snapshot.data;
               if (!documentSnapshot!.exists) {
               } else {
-                nickname.text = snapshot.data!.get('nickname');
+                final data = Map<String, dynamic>.from((snapshot.data!.data() ?? {}) as Map<String, dynamic>);
+                displayName.text = data['displayName'] ?? '';
               }
 
               return Column(
@@ -42,8 +43,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   const Text('Profile update'),
                   const SizedBox(height: 24),
                   TextField(
-                    controller: nickname,
-                    decoration: const InputDecoration(border: OutlineInputBorder(), label: Text('Nickname')),
+                    controller: displayName,
+                    decoration: const InputDecoration(border: OutlineInputBorder(), label: Text('Display name')),
                   ),
                   const SizedBox(height: 24),
                   const SizedBox(height: 24),
@@ -64,7 +65,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           await db
                               .collection('users')
                               .doc(user!.uid)
-                              .set({'nickname': nickname.text}, SetOptions(merge: true));
+                              .set({'displayName': displayName.text}, SetOptions(merge: true));
 
                           if (mounted) {
                             ScaffoldMessenger.of(context).showSnackBar(

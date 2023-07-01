@@ -10,7 +10,7 @@ class UserList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final usersQuery = FirebaseFirestore.instance.collection('users').orderBy('nickname');
+    final usersQuery = FirebaseFirestore.instance.collection('users').orderBy('displayName');
     return Scaffold(
       appBar: AppBar(
         title: const Text('User List'),
@@ -22,7 +22,7 @@ class UserList extends StatelessWidget {
           String uid = snapshot.id;
 
           return ListTile(
-            title: Text('User name is ${user['nickname']}', style: Theme.of(context).textTheme.bodyLarge),
+            title: Text('User name is ${user['displayName']}', style: Theme.of(context).textTheme.bodyLarge),
             trailing: const Icon(Icons.chevron_right),
             onTap: () => context.pushNamed(
               ChatRoomScreen.routeName,
