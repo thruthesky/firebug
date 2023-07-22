@@ -1,64 +1,65 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "영자 - Simulator",
-            "request": "launch",
-            "type": "dart",
-            "program": "lib/main.dart",
-            "args": [
-                "--dart-define",
-                "a=b"
-            ],
-            "cwd": "${workspaceFolder}",
-            "flutterMode": "debug",
-            "deviceId": "8A752C04-06F3-4B21-9B5E-BEEDF313FC5E",
-        },
-        {
-            "name": "영자 - Chrome",
-            "request": "launch",
-            "type": "dart",
-            "program": "lib/main.dart",
-            "args": [
-                "--dart-define",
-                "a=b"
-            ],
-            "cwd": "${workspaceFolder}",
-            "flutterMode": "debug",
-            "deviceId": "chrome",
-        },
-        {
-            "name": "영자 - iPhone11MaxPro",
-            "request": "launch",
-            "type": "dart",
-            "program": "lib/main.dart",
-            "args": [
-                "--dart-define",
-                "a=b"
-            ],
-            "cwd": "${workspaceFolder}",
-            "flutterMode": "debug",
-            "deviceId": "00008030-000904C80290802E",
-        },
-        {
-            "name": "firebug",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "firebug (profile mode)",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "firebug (release mode)",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "영자 - Simulator",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "args": ["--dart-define", "a=b"],
+      "cwd": "${workspaceFolder}",
+      "flutterMode": "debug",
+      "deviceId": "8A752C04-06F3-4B21-9B5E-BEEDF313FC5E"
+    },
+    {
+      "name": "영자 - Chrome",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "args": ["--dart-define", "a=b"],
+      "cwd": "${workspaceFolder}",
+      "flutterMode": "debug",
+      "deviceId": "chrome"
+    },
+    {
+      "name": "영자 - iPhone11MaxPro",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "args": ["--dart-define", "a=b"],
+      "cwd": "${workspaceFolder}",
+      "flutterMode": "debug",
+      "deviceId": "00008030-000904C80290802E"
+    },
+    {
+      "name": "영자 - Emulator",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "args": ["--dart-define", "a=b"],
+      "cwd": "${workspaceFolder}",
+      "flutterMode": "debug",
+      "deviceId": "emulator-5554"
+    },
+    {
+      "name": "firebug",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "firebug (profile mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "firebug (release mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    }
+  ]
 }
